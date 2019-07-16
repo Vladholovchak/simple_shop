@@ -1,0 +1,68 @@
+AllCops:
+  Exclude:
+    - 'spec/spec_helper.rb'
+    - 'bin/**/*'
+    - 'db/schema.rb'
+    - 'config/initializers/devise.rb'
+    - 'spec/rails_helper.rb'
+    - 'config/environments/*'
+    - 'config/puma.rb'
+
+Metrics/LineLength:
+  Max: 130
+
+Metrics/CyclomaticComplexity:
+  Max: 15
+
+Metrics/ClassLength:
+  Max: 200
+
+Metrics/ModuleLength:
+  Max: 200
+
+Style/GuardClause:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 20
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+Rails:
+  Enabled: true
+
+Naming/AccessorMethodName:
+  Exclude:
+    - app/datatables/**/*
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+
+Rails/HasManyOrHasOneDependent:
+  Enabled: false
+
+Rails/FilePath:
+  Enabled: false
+
+Style/ModuleFunction:
+  Enabled: false
+
+Style/Lambda:
+  Enabled: false
+
+Lint/AmbiguousRegexpLiteral:
+  Enabled: false
+
+Style/RescueStandardError:
+  Enabled: false
+
+Style/EmptyLambdaParameter:
+  Enabled: false
+
+Security/Open:
+  Enabled: false
