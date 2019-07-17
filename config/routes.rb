@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  use_doorkeeper
-  devise_for :users
+  # Use for login and autorize all resource
+  use_doorkeeper do
+    # No need to register client application
+    skip_controllers :applications, :authorized_applications
+  end
+
   scope module: :api, defaults: { format: :json }, path: 'api'  do
+
     scope module: :v1, constraints: ApiVersion.new('v1', true) do
       devise_for :users, controllers: {
           registrations: 'api/v1/users/registrations',
